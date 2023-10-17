@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+
+nav{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 75px;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+.nav__title{
+    margin: 10px 0;
+    font-size: 28px;
+}
+.links__wrapper{
+    display: flex;
+    gap: 25px;
+}
+.nav__link{
+    font-size: 18px;
+    text-decoration: none;
+    color: #232323;
+}
+
+.closeMenu__btn, .openMenu__btn{
+    position: absolute;
+    right: 10px;
+    top: 20px;
+
+    font-size: 35px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    transition: 0.1s;
+    display: none;
+}
+.closeMenu__btn:hover, .openMenu__btn:hover{
+    opacity: 75%;
+}
+
+.openMenu__btn{
+    right: unset;
+    left: 20px;
+}
+
+@media screen and (max-width: 660px) {
+    nav{
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 45%;
+        height: 100%;
+
+        flex-direction: column;
+        align-items: unset;
+        justify-content: unset;
+        padding: 10px 25px;
+        gap: 180px;
+        transform: translateX(-100%);
+    }
+    .links__wrapper{
+        flex-direction: column;
+    }
+    .closeMenu__btn, .openMenu__btn{
+        display: flex;
+    }
+    .toggleMenu{
+        transform: translateX(0%);
+    }
+}
