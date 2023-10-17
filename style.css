@@ -13,7 +13,7 @@ nav{
     justify-content: space-between;
     padding: 0 75px;
     box-sizing: border-box;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 .nav__title{
     margin: 10px 0;
@@ -32,7 +32,7 @@ nav{
 .closeMenu__btn, .openMenu__btn{
     position: absolute;
     right: 10px;
-    top: 20px;
+    top: 23px;
 
     font-size: 35px;
     background-color: transparent;
