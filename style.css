@@ -55,9 +55,6 @@ nav{
     left: 20px;
 }
 
-header{
-
-}
 .background__wrapper{
     background-image: url("./img/skyscrapers-3184798_1920.jpg");
     background-position: center;
@@ -118,7 +115,7 @@ header{
     padding: 30px 15vw;
     box-sizing: border-box;
 }
-.section__title{
+.section1__title{
     font-size: 45px;
     width: 100%;
     margin: 0;
@@ -150,12 +147,58 @@ header{
     border-radius: 10px;
     border: none;
 }
-
 .section1__text{
     font-size: 20px;
 
     border-left: 5px solid #FF3366;
     padding-left: 45px;
+}
+
+.aboutUs{
+    padding: 30px 15vw;
+    display: flex;
+}
+.aboutUs__content{
+    width: 50%;
+}
+.aboutUs__title{
+    font-size: 45px;
+    position: relative;
+}
+.aboutUs__title::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10%;
+    height: 6px;
+    border-radius: 10px;
+    background-color: #008377;
+}
+.aboutUs__text{
+    font-size: 20px;
+}
+.aboutUs__background__wrapper{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.aboutUs__background__wrapper img{
+    width: 80%;
+    transform: translateY(-50px);
+}
+.aboutUs__btn{
+    position: absolute;
+    bottom: 75px;
+    left: 0;
+
+    background: rgb(255,51,102);
+    background: linear-gradient(90deg, rgba(255,51,102,0.4845587893360469) 0%, rgba(255,51,102,1) 35%);
+    padding: 10px 30px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
 }
 
 @media screen and (max-width: 1500px){
@@ -180,6 +223,33 @@ header{
     }
     .title__wrapper{
         text-align: left;
+    }
+    .aboutUs{
+        flex-direction: column-reverse;
+        position: relative;
+        padding-bottom: 75px;
+    }
+    .aboutUs__background__wrapper,
+    .aboutUs__content{
+        width: 100%;
+    }
+    .aboutUs__background__wrapper{
+        position: unset;
+    }
+    .aboutUs__background__wrapper img{
+        width: 100%;
+        transform: unset;
+    }
+    .aboutUs__title{
+        font-size: 28px;
+    }
+    .aboutUs__title::after{
+        width: 45%;
+    }
+    .aboutUs__btn{
+        bottom: 25px;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 @media screen and (max-width: 660px) {
@@ -207,10 +277,13 @@ header{
     .toggleMenu{
         transform: translateX(0%);
     }
+    .section1, .aboutUs{
+        padding: 25px 35px;
+    }
     .company__title{
         font-size: 55px;
     }
-    .section__title{
+    .section1__title{
         border-left: 8px solid #008377;
         padding-left: 45px;
         font-size: 32px;
@@ -220,5 +293,8 @@ header{
         border-left: unset;
         padding-left: unset;
         padding-bottom: 20px;
+    }
+    .aboutUs{
+        padding-bottom: 75px;
     }
 }
