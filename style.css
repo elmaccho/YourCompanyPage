@@ -56,7 +56,7 @@ nav{
 }
 
 header{
-    border: 1px solid red;
+
 }
 .background__wrapper{
     background-image: url("./img/skyscrapers-3184798_1920.jpg");
@@ -81,8 +81,9 @@ header{
     justify-content: center;
     gap: 70px;
 
-    position: relative;
-    top: -80px;
+    /* position: relative;
+    top: -80px; */
+    transform: translateY(-80px);
 }
 .card{
     background-color: #011627;
@@ -112,10 +113,52 @@ header{
     font-weight: 100;
 }
 
+.section1{
+    background-color: #F2F2F2;
+    padding: 30px 15vw;
+    box-sizing: border-box;
+}
+.section__title{
+    font-size: 45px;
+    width: 100%;
+    margin: 0;
+    position: relative;
+}
+.title__wrapper{
+    display: flex;
+    align-items: center;
+}
+.title__wrapper hr{
+    width: 80%;
+    height: 7px;
+    background-color: #008377;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.section1__text__wrapper{
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+.section1__text__wrapper hr{
+    width: 10px;
+    height: 70px;
+    background-color: #FF3366;
+    outline: none;
+    border-radius: 10px;
+    border: none;
+}
+
+.section1__text{
+    font-size: 20px;
+
+    border-left: 5px solid #FF3366;
+    padding-left: 45px;
+}
+
 @media screen and (max-width: 1500px){
-    header{
-        height: 500px;
-    }
 }
 @media screen and (max-width: 1024px) {
     .cards__wrapper{
@@ -131,6 +174,12 @@ header{
         -webkit-box-shadow: unset;
         -moz-box-shadow: unset;
         box-shadow: unset;        
+    }
+    .title__wrapper hr{
+        display: none;
+    }
+    .title__wrapper{
+        text-align: left;
     }
 }
 @media screen and (max-width: 660px) {
@@ -157,5 +206,19 @@ header{
     }
     .toggleMenu{
         transform: translateX(0%);
+    }
+    .company__title{
+        font-size: 55px;
+    }
+    .section__title{
+        border-left: 8px solid #008377;
+        padding-left: 45px;
+        font-size: 32px;
+    }
+    .section1__text{
+        border-bottom: 8px solid #FF3366;
+        border-left: unset;
+        padding-left: unset;
+        padding-bottom: 20px;
     }
 }
