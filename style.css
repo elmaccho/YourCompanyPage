@@ -9,6 +9,9 @@ body{
     flex-direction: column;
 }
 
+a{
+    text-decoration: none;
+}
 
 nav{
     background-color: white;
@@ -199,6 +202,78 @@ nav{
     text-decoration: none;
     color: white;
     border-radius: 5px;
+}
+
+.team{
+    border: 1px solid red;
+    padding: 30px 15vw;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card__background{
+    width: 24vw;
+
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.box__background{
+    display: block;
+    width: 24vw;
+    height: 20vw;
+    background-color: #008377;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+}
+.card__info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.user__name, .user__info{
+    color: #232323;
+}
+.user__name{
+    font-size: 25px;
+    margin: 10px auto;
+}
+
+.card__line{
+    width: 80px;
+    border: 1px solid #008377;
+}
+
+.socialMedia__wrapper{
+    display: flex;
+    justify-content: space-around;
+    width: 100px;
+}
+
+.socialmediaIcon{
+    width: 25px;
+    height: 25px;
+    padding: 5px;
+
+    color: white;
+    font-size: 20px;
+    text-decoration: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.facebookIcon{
+    background-color: #011627;
+    /* text-decoration: none; */
+}
+.instagramIcon{
+    background-color: #FF3366;
+    /* text-decoration: none; */
 }
 
 @media screen and (max-width: 1500px){
