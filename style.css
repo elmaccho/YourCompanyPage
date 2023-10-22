@@ -205,23 +205,30 @@ nav{
 }
 
 .team{
-    border: 1px solid red;
     padding: 30px 15vw;
     display: flex;
     justify-content: space-around;
 }
 
-.card__background{
+.card__wrapper{
     width: 24vw;
+}
+.card__background{
+    height: 400px;
+    width: 100%;
 
     display: flex;
     justify-content: center;
     position: relative;
 }
+.card__photo{
+    position: absolute;
+    bottom: 0;
+}
 .box__background{
     display: block;
-    width: 24vw;
-    height: 20vw;
+    width: 100%;
+    height: 270px;
     background-color: #008377;
     position: absolute;
     bottom: 0;
@@ -269,14 +276,29 @@ nav{
 
 .facebookIcon{
     background-color: #011627;
-    /* text-decoration: none; */
 }
 .instagramIcon{
     background-color: #FF3366;
-    /* text-decoration: none; */
 }
 
 @media screen and (max-width: 1500px){
+}
+@media screen and (max-width: 1350px) {
+    .team {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(380px, auto));
+        gap: 10px;
+        box-sizing: border-box;
+        padding: 30px 15vw;
+        width: 100%;
+        justify-content: center;
+        align-content: center;
+    }
+    
+    .card__wrapper{
+        width: 380px;
+        overflow: hidden;
+    }
 }
 @media screen and (max-width: 1024px) {
     .cards__wrapper{
@@ -371,5 +393,16 @@ nav{
     }
     .aboutUs{
         padding-bottom: 75px;
+    }
+
+    .team {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+@media screen and (max-width: 500px) {
+    .card__wrapper{
+        width: 90%;
     }
 }
