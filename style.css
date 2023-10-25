@@ -25,6 +25,7 @@ nav{
     padding: 0 75px;
     box-sizing: border-box;
     transition: 0.3s ease;
+    z-index: 1;
 }
 .nav__title{
     margin: 10px 0;
@@ -52,6 +53,7 @@ nav{
     cursor: pointer;
     transition: 0.1s;
     display: none;
+    z-index: 1;
 }
 .closeMenu__btn:hover, .openMenu__btn:hover{
     opacity: 75%;
@@ -60,6 +62,7 @@ nav{
 .openMenu__btn{
     right: unset;
     left: 20px;
+    color: white;
 }
 
 .background__wrapper{
@@ -113,6 +116,7 @@ nav{
 .card__title, .card__info, .card__text{
     color: white;
 }
+
 .card__text{
     font-weight: 100;
 }
@@ -214,10 +218,10 @@ nav{
     justify-content: space-around;
 }
 
-.card__wrapper{
+.team__card__wrapper{
     width: 24vw;
 }
-.card__background{
+.team__card__background{
     height: 400px;
     width: 100%;
 
@@ -225,7 +229,7 @@ nav{
     justify-content: center;
     position: relative;
 }
-.card__photo{
+.team__card__photo{
     position: absolute;
     bottom: 0;
 }
@@ -238,20 +242,21 @@ nav{
     bottom: 0;
     z-index: -1;
 }
-.card__info{
+.team__card__info{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-.user__name, .user__info{
+.team__user__name, .team__user__info{
     color: #232323;
 }
-.user__name{
+.team__user__name{
     font-size: 25px;
     margin: 10px auto;
 }
 
-.card__line{
+.team__card__line{
     width: 80px;
     border: 1px solid #008377;
 }
@@ -285,14 +290,15 @@ nav{
 }
 
 .contactUs{
-    background-color: #232323;
+    background-image: url("/img/canyon-1740973_1920.jpg");
+    
     padding: 25px 0 45px;
 
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 45px;
-}
+} 
 .form__title{
     margin: 0;
     font-size: 45px;
@@ -346,8 +352,12 @@ nav{
 }
 
 footer{
+    background-color: #010101;
     display: flex;
     flex-direction: column;
+    padding: 45px;
+    box-sizing: border-box;
+    gap: 35px;
 }
 .footer__info__wrapper{
     display: flex;
@@ -357,9 +367,67 @@ footer{
 .footer__box__info{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
+
+.footer__company__logo, .footer__company__name{
+    color: white;
+}
+.footer__company__logo{
+    font-size: 30px;
+}
+.footer__company__name{
+    margin: 0;
+    font-size: 15px;
+}
+
 .company__info{
-    /* text-align: center; */
+    text-align: center;
+}
+
+.company__tel__number, .company__adress{
+    color: white;
+}
+.company__email{
+    font-weight: 600;
+    color: #008377;
+}
+.footer__box__info .nav__link{
+    color: white;
+    font-weight: 200;
+}
+
+footer hr{
+    width: 100%;
+}
+
+.fa-brands{
+    color: white;
+}
+.social__wrapper{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.social__link{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.social__link:hover{
+    background-color: white;
+}
+.social__link:hover .fa-brands{
+    color: #232323;
+}
+.copyright__box{
+    color: white;
 }
 
 @media screen and (max-width: 1500px){
@@ -376,7 +444,7 @@ footer{
         align-content: center;
     }
     
-    .card__wrapper{
+    .team__card__wrapper{
         width: 380px;
         overflow: hidden;
     }
@@ -475,17 +543,24 @@ footer{
     .aboutUs{
         padding-bottom: 75px;
     }
-
     .team {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+    .team__card__wrapper{
+        width: 100%;
     }
     .form__wrapper{
         width: 80%;
     }
     .input__wrapper{
         flex-direction: column;
+    }
+
+    .footer__info__wrapper{
+        flex-direction: column;
+        gap: 45px;
     }
     
 }
