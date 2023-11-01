@@ -222,7 +222,7 @@ nav{
     width: 24vw;
 }
 .team__card__background{
-    height: 400px;
+    height: 380px;
     width: 100%;
 
     display: flex;
@@ -231,6 +231,7 @@ nav{
 }
 .team__card__photo{
     position: absolute;
+    width: 100%;
     bottom: 0;
 }
 .box__background{
@@ -370,6 +371,7 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 125px;
 }
 
 .footer__company__logo, .footer__company__name{
